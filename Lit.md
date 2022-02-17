@@ -22,8 +22,8 @@
    - "<h1>${this.message}</h1>"
 
 6. CE im HTML 'index.html' im 'body' einbinden
-   - "<comp-main></comp-main>"
-   - "<script type="module" src="./out-tsc/src/main.js"></script>"   
+   - "//<comp-main></comp-main>"
+   - "\\<script type="module" src="./out-tsc/src/main.js"></script>"   
 
 # Quellen
 https://lit.dev/docs/v1/components/decorators/#to-use-decorators-with-typescript
