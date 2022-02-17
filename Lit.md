@@ -19,7 +19,7 @@
    - "@property({ type: String }) message: string = 'Welcome to LitElement';"
 
 5. Property im Template anwenden 
-   - "\\<h1>${this.message}</h1>"
+   - "\<h1>\${this.message}</h1>"
 
 6. CE im HTML 'index.html' im 'body' einbinden
    - "\<comp-main></comp-main>"
