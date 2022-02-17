@@ -5,11 +5,16 @@
 
 2. Zu zweit wird tsc ausgeführt, der nach 'tsconfig.json' arbeitet
    - tsc nimmt folgende Files zum Transpilieren:  "include": ["./src/**/*.ts"]
-   - In "outDir": "out-tsc" wie also transpilierte Ausgabe von tsc gespeichert 
+   - In "outDir": "out-tsc" wie die transpilierte Ausgabe von tsc gespeichert
+   - Vor allem ist 'main.js' wichtig  
 
-3. Im 'index.html' ist Angabe "module" für Rollup, sommit weiß er wo ist transpilierte Ausgabe von tsc  
+3. Im 'index.html' ist Angabe "module" für Rollup, sommit weiß er wo ist die transpilierte Ausgabe von tsc  
    - /<script type="module" src="./out-tsc/src/main.js"></script>
-   -
-3.    rollup -c rollup.config.js
-   - 
-   -  
+   
+4. Alls Drittes wird Rollup ausgeführt, der nach 'rollup.config.js' arbeitet
+   - "rollup -c rollup.config.js"
+   - Im "rollup.config.js"  wird "open-wc-project-generator" Erweiterung "@open-wc/building-rollup" genutzt
+   - Als Input File ist  "input: './index.html'" gelegt wo wiederrum 'main.js' als "module" festgelegt ist 
+   - Rollup macht Build von externen JS und von 'main.js' welsches dann ausgedührt werden kann 
+
+
